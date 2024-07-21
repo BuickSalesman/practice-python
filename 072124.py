@@ -101,3 +101,31 @@ shirt = {"brand": "brand", "color": "color", "size": "size"}
 print(shirt["brand"])
 print(shirt["color"])
 print(shirt["size"])
+
+
+# Write a ShoppingCart class that stores an array of items with methods to add an item, remove an item, and display all the items.
+
+class ShoppingCart:
+    def __init__(self):
+        self.items = []
+
+    def add_item(self, item):
+        self.items.append(item)
+
+    def remove_item(self, item):
+        if item in self.items:
+            self.items.remove(item)
+
+    def display_items(self):
+        print("Items in cart:")
+        for item in self.items:
+            print("- " + item)
+
+
+cart = ShoppingCart()
+cart.add_item("Apple")
+cart.add_item("Banana")
+cart.add_item("Orange")
+cart.display_items()
+cart.remove_item("Banana")
+cart.display_items()
