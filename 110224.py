@@ -1,131 +1,67 @@
-# Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
+# Start with an array of numbers and create a new array with each number times 3.
+# For example, [1, 2, 3] becomes[3, 6, 9].
+
+numbers = [1, 2, 3]
+trippled_numbers = [number * 3 for number in numbers]
+print(trippled_numbers)
+
+# Start with an array of strings and create a new array with each string upcased.
+# For example, ["hello", "goodbye"] becomes["HELLO", "GOODBYE"].
+
+words = ["hello", "goodbye"]
+capital_words = [word.upper() for word in words]
+print(capital_words)
+
+# Start with an array of hashes and create a new array of string values from each hash's: name key.
+# For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes["Alice", "Blane"].
+
+people = [{"name": "Alice", "age": 27}, {"name": "Blane", "age": 16}]
+names = [person["name"] for person in people]
+print(names)
+
+# Start with an array of numbers and create a new array with each number plus 7.
+# For example, [1, 2, 3] becomes[8, 9, 10].
+
+numbers = [1, 2, 3]
+slightly_bigger_numbers = [number + 7 for number in numbers]
+print(slightly_bigger_numbers)
+
+# Start with an array of strings and create a new array with each string's length.
+# For example, ["hello", "goodbye"] becomes[5, 7].
+
+words = ["hello", "goodbye"]
+words_length = [len(word) for word in words]
+print(words_length)
+
+# Start with an array of hashes and create a new array of number values from each hash's: age key.
+# For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes[27, 16].
+
+people = [{"name": "Alice", "age": 27}, {"name": "Blane", "age": 16}]
+ages = [person["age"] for person in people]
+print(ages)
 
 
-person = {
-    "first_name": "Kelsey",
-    "last_name": "Kavanagh",
-    "email": "1234@gmail.com"
-}
+# Start with an array of numbers and create a new array with each number divided by 2.
+# For example, [1, 2, 3] becomes[0.5, 1.0, 1.5].
 
-print(person["first_name"])
-print(person["last_name"])
-print(person["email"])
+divided = [number / 2 for number in numbers]
+print(divided)
 
-# Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
+# Start with an array of strings and create a new array with each string's first letter only.
+# For example, ["hello", "goodbye"] becomes["h", "g"].
 
-names = [
-    {"first_name": "Kelsey", "last_name": "Kavanagh"},
-    {"first_name": "Adam", "last_name": "O'Donnell"},
-    {"first_name": "Jacob", "last_name": "Baker"}
-]
+first_letter = [word[0] for word in words]
+print(first_letter)
 
-print(names[0])
+# Start with an array of hashes and create a new array of number values from each hash's: age key times 2.
+# For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes[54, 32].
 
-# Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
+multiplied_ages = [person["age"] * 2 for person in people]
+print(multiplied_ages)
 
-menu = {"burger": 10, "wings": 8, "fries": 4, }
-menu["fried pickles"] = 6
+# Start with an array of numbers and create a new array with each number converted into a string.
+# For example, [1, 2, 3] becomes["1", "2", "3"].
 
-print(menu)
-
-# Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
-
-book = {
-    "title": "CODE",
-    "author": "Charles Petzold",
-    "pages": 700,
-    "language": "English"
-}
-
-print(book["title"])
-print(book["author"])
-print(book["pages"])
-print(book["language"])
-
-
-# Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
-
-books = [
-    {"title": "CODE", "author": "Charles Petzold"},
-    {"title": "99 Bottle of OOP", "author": "Sandi Metz"},
-    {"title": "The Non-Designer's Design Book", "author": "Robin Williams"}
-]
-
-print(books[2]["author"])
-
-# Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the
-# result.
-
-capitals = {
-    "oregon": "salem",
-    "california": "sacremento",
-    "missouri": "jefferson city"
-}
-
-capitals["georgia"] = "atlanta"
-
-print(capitals)
-
-# Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
-
-laptop = {"brand": "apple", "model": "m1", "year": "2023"}
-print(laptop["model"])
-print(laptop["brand"])
-print(laptop["year"])
-
-# Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
-
-laptops = [
-    {"brand": "best brand", "model": "best laptop"},
-    {"brand": "worst brand", "model": "worst model"},
-    {"brand": "ok brand", "model": "ok model"}
-]
-
-print(laptops[1]["model"])
-
-# Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
-
-definitions = {
-    "sycophant": "a person who acts obsequiously toward someone important in order to gain advantage.",
-    "obsequious": "obedient or attentive to an excessive or servile degree.",
-}
-
-definitions["servile"] = "submissive or fawning in attitude or behavior."
-
-print(definitions)
-
-# Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
-
-shirt = {"brand": "brand", "color": "color", "size": "size"}
-
-print(shirt["brand"])
-print(shirt["color"])
-print(shirt["size"])
-
-
-# Write a ShoppingCart class that stores an array of items with methods to add an item, remove an item, and display all the items.
-
-class ShoppingCart:
-    def __init__(self):
-        self.items = []
-
-    def add_item(self, item):
-        self.items.append(item)
-
-    def remove_item(self, item):
-        if item in self.items:
-            self.items.remove(item)
-
-    def display_items(self):
-        print("Items in cart:")
-        for item in self.items:
-            print("- " + item)
-
-
-cart = ShoppingCart()
-cart.add_item("Apple")
-cart.add_item("Banana")
-cart.add_item("Orange")
-cart.display_items()
-cart.remove_item("Banana")
-cart.display_items()
+numbers = [1, 2, 3]
+stringy_numbers = [str(number) for number in numbers]
+print(stringy_numbers)
